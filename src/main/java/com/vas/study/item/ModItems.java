@@ -9,9 +9,10 @@ import net.minecraft.world.item.Item;
 
 import java.util.function.Function;
 
+import static com.vas.study.Study.LOGGER;
 import static com.vas.study.Study.MOD_ID;
 
-public class StudyItem {
+public class ModItems {
 
     public static final Item STUDY_ITEM = registerModItem("study_item");
 
@@ -23,5 +24,6 @@ public class StudyItem {
     }
 
     public static void initialize() {
+        LOGGER.info("Resister Mod Items for " + MOD_ID);
     }
 }

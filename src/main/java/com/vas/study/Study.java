@@ -1,5 +1,7 @@
 package com.vas.study;
 
+import com.vas.study.item.ModCreativeModeTabs;
+import com.vas.study.item.ModItems;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -21,6 +23,7 @@ public class Study implements ModInitializer {
 
 		LOGGER.info("Hello Fabric world!");
 
-		StudyItem.initialize();
+		ModItems.initialize();
+		ModCreativeModeTabs.initialize();
 	}
 }
