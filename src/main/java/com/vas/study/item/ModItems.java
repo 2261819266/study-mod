@@ -1,4 +1,4 @@
-package com.vas.study;
+package com.vas.study.item;
 
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
