@@ -1,5 +1,6 @@
 package com.vas.study;
 
+import com.vas.study.block.ModBlocks;
 import com.vas.study.item.ModCreativeModeTabs;
 import com.vas.study.item.ModItems;
 import net.fabricmc.api.ModInitializer;
@@ -25,5 +26,6 @@ public class Study implements ModInitializer {
 
 		ModItems.initialize();
 		ModCreativeModeTabs.initialize();
+		ModBlocks.initialize();
 	}
 }

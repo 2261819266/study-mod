@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_study_item": {
+      "conditions": {
+        "items": [
+          {
+            "items": "study:study_item"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "study:study_block"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_study_item"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "study:study_block"
+    ]
+  }
+}

@@ -1,5 +1,6 @@
 package com.vas.study.item;
 
+import com.vas.study.block.ModBlocks;
 import net.fabricmc.fabric.api.creativetab.v1.FabricCreativeModeTab;
 import net.minecraft.core.Registry;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -24,6 +25,7 @@ public class ModCreativeModeTabs {
             .icon(() -> new ItemStack(ModItems.STUDY_ITEM))
             .displayItems((parameters, output) -> {
                 output.accept(STUDY_ITEM);
+                output.accept(ModBlocks.STUDY_BLOCK);
             }).build();
 
     public static void initialize() {

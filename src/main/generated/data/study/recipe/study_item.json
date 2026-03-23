@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    "study:study_block"
+  ],
+  "result": {
+    "count": 9,
+    "id": "study:study_item"
+  }
+}

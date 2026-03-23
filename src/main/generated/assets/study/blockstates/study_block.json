@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "study:block/study_block"
+    }
+  }
+}
