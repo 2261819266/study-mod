@@ -1,0 +1,36 @@
+package com.vas.study.server.commands;
+
+import com.mojang.brigadier.CommandDispatcher;
+import net.minecraft.commands.CommandBuildContext;
+import net.minecraft.commands.CommandSourceStack;
+import net.minecraft.commands.Commands;
+import net.minecraft.commands.arguments.MessageArgument;
+import net.minecraft.network.chat.ChatType;
+import net.minecraft.server.MinecraftServer;
+import net.minecraft.server.players.PlayerList;
+
+public class VasCommand extends Commands {
+    public VasCommand(CommandSelection commandSelection, CommandBuildContext context) {
+        super(commandSelection, context);
+    }
+
+    public static void register(final CommandDispatcher<CommandSourceStack> dispatcher) {
+        // TODO Auto-generated method stub
+        dispatcher.register(
+                Commands.literal("vas")
+                        .requires(Commands.hasPermission(Commands.LEVEL_GAMEMASTERS))
+                        .then(Commands.argument("message", MessageArgument.message()).executes(c -> {
+                            MessageArgument.resolveChatMessage(c, "message", message -> {
+                                CommandSourceStack source = c.getSource();
+                                PlayerList playerList = source.getServer().getPlayerList();
+                                playerList.broadcastChatMessage(message, source, ChatType.bind(ChatType.SAY_COMMAND, source));
+                            });
+                            return 1;
+                        }))
+        );
+    }
+
+    public void initialize() {
+        register(this.getDispatcher());
+    }
+}

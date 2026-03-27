@@ -3,6 +3,7 @@ package com.vas.study;
 import com.vas.study.block.ModBlocks;
 import com.vas.study.item.ModCreativeModeTabs;
 import com.vas.study.item.ModItems;
+import com.vas.study.server.commands.VasCommand;
 import net.fabricmc.api.ModInitializer;
 
 import org.slf4j.Logger;
@@ -27,5 +28,6 @@ public class Study implements ModInitializer {
 		ModItems.initialize();
 		ModCreativeModeTabs.initialize();
 		ModBlocks.initialize();
+//		VasCommand.initialize();
 	}
 }
